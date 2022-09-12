@@ -12,7 +12,7 @@
   "minimum-stability": "stable",
   "require": {
     "php": "^5.6",
-    "guzzlehttp/guzzle": "^6.5",
+    "guzzlehttp/guzzle": "^6.5@stable",
     "ext-json": "*"
   },
   "autoload": {
