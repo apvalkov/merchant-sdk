@@ -28,7 +28,7 @@ class SessionsFactory
         $sessionDto->fiatCurrencyCode = $session->fiat_currency_code;
         $sessionDto->orderId          = $session->order_id;
         $sessionDto->orderName        = $session->order_name;
-        $sessionDto->createdDate      = $session->created_data;
+        $sessionDto->createdDate      = $session->created_date;
 
         $customer = CustomersFactory::create($session->customer);
 
