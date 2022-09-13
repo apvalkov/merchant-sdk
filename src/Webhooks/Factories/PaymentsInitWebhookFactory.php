@@ -30,7 +30,7 @@ class PaymentsInitWebhookFactory
         $webhookData = new PaymentInitData();
 
         $webhookData->session       = SessionsFactory::create($webhook->data->session);
-        $webhookData->paymentIntent = PaymentIntentsFactory::create($webhook->data->paymentIntent);
+        $webhookData->paymentIntent = PaymentIntentsFactory::create($webhook->data->payment_intent);
 
         $webhookDto = new PaymentInitWebhook($webhook->id, $webhook->object, $webhook->name);
 

@@ -30,7 +30,7 @@ class PaymentsCanceledWebhookFactory
         $webhookData = new PaymentCanceledData();
 
         $webhookData->session       = SessionsFactory::create($webhook->data->session);
-        $webhookData->paymentIntent = PaymentIntentsFactory::create($webhook->data->paymentIntent);
+        $webhookData->paymentIntent = PaymentIntentsFactory::create($webhook->data->payment_intent);
 
         $webhookDto = new PaymentCanceledWebhook($webhook->id, $webhook->object, $webhook->name);
 

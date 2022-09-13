@@ -34,7 +34,7 @@ class PaymentsWaitingConfirmationsWebhookFactory
 
         $webhookData->payment       = PaymentsFactory::create($webhook->data->payment);
         $webhookData->session       = SessionsFactory::create($webhook->data->session);
-        $webhookData->paymentIntent = PaymentIntentsFactory::create($webhook->data->paymentIntent);
+        $webhookData->paymentIntent = PaymentIntentsFactory::create($webhook->data->payment_intent);
 
         $webhookDto = new PaymentWaitingConfirmationsWebhook($webhook->id, $webhook->object, $webhook->name);
 
