@@ -11,9 +11,8 @@ use INXY\Payments\Merchant\Enums\CurrencyCode;
 use INXY\Payments\Merchant\Http\Requests\Dto\Customer;
 
 $apiKey    = 'Your api key here';
-$secretKey = 'Your secret key here';
 
-$config       = new Config(Environment::Sandbox, $apiKey, $secretKey, ApiVersion::v1);
+$config       = new Config(Environment::Sandbox, $apiKey,  ApiVersion::v1);
 $inxyPayments = new INXYPayments($config);
 
 

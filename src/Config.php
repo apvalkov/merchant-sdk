@@ -19,23 +19,17 @@ class Config
     /**
      * @var string
      */
-    private $secretKey;
-    /**
-     * @var string
-     */
     private $apiVersion;
 
     /**
      * @param string      $environment
      * @param string      $apiKey
-     * @param string      $secretKey
      * @param string|null $apiVersion
      */
-    public function __construct($environment, $apiKey, $secretKey, $apiVersion = null)
+    public function __construct($environment, $apiKey, $apiVersion = null)
     {
         $this->url        = $environment === Environment::Production ? ApiUrl::Production : ApiUrl::Sandbox;
         $this->apiKey     = $apiKey;
-        $this->secretKey  = $secretKey;
         $this->apiVersion = $apiVersion === null ? ApiVersion::v1 : $apiVersion;
     }
 
@@ -53,14 +47,6 @@ class Config
     public function getApiKey()
     {
         return $this->apiKey;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSecretKey()
-    {
-        return $this->secretKey;
     }
 
     /**
